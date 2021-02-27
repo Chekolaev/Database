@@ -83,3 +83,28 @@ VALUES (3,4, now())
 INSERT
 	INTO students_hobby (id, hobby_id, date_start)
 VALUES (3,1, now())
+
+
+
+
+
+
+SELECT st.name, st.surname as family_name
+FROM student st
+WHERE 
+st.n_group = 2281
+AND
+st.score > 4.5
+
+
+SELECT st.name, st.surname as family_name
+FROM student st
+WHERE 
+st.surname like '%ov' --like  %_
+ORDER BY st.n_group, st.surname  --ASC(<)/DESC(>)
+
+SELECT st.name, st.surname as family_name
+FROM student st
+--WHERE st. address IS NOT NULL
+--WHERE st.n_group IN (2281, 2281, 3281)
+WHERE st.score BETWEEN 3 and 4
